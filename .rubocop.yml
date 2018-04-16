@@ -39,9 +39,6 @@ Style/ParallelAssignment:
 Style/AccessorMethodName:
   Enabled: true
 
-Style/IfUnlessModifier:
-  MaxLineLength: 80
-
 Style/MultilineOperationIndentation:
   Enabled: true
 
