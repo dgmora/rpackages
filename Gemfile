@@ -23,6 +23,14 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :test do
+  # I believe that instance variables set by rails controllers
+  # are a result and therefore must be tested. Just testing
+  # http codes is not enough.
+  # Not sure why it's not downloading..
+  # gem 'rails-controller-testing'
+end
+
 group :development do
   gem 'guard-bundler'
   gem 'guard-rspec'

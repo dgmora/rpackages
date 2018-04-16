@@ -1,0 +1,25 @@
+<h1>R packages</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Maintainers</th>
+      <th>Authors</th>
+      <th>Publication Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @packages.each do |p| %>
+    <tr>
+      <th><%= p.name %></th>
+      <th><%= p.title %></th>
+      <th><%= p.description %></th>
+      <th><%= humanize_person_array(p.maintainers) %></th>
+      <th><%= humanize_person_array(p.authors) %></th>
+      <th><%= p.publication_date %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

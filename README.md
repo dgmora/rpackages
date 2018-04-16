@@ -35,3 +35,8 @@ bundle exec rails s
 It's quite obvious that instead of serializing the authors and maintainers we
 could have a `Person` model, but this would involve checking if the user exists,
 and two extra tables which don't add a lot of benefit in this example.
+
+### Not using `package_helper`
+
+I don't like a lot draper gem and I think a helper is find enough for such an exercise.
+

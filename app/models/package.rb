@@ -7,4 +7,5 @@ class Package < ApplicationRecord
   validates :name, presence: true
   validates :publication_date, presence: true
   validates :version, presence: true
+
 end
