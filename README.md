@@ -1,24 +1,28 @@
-# README
+# R-packages
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a small rails project that will:
 
-Things you may want to cover:
+1. Given a CRAN server, it will extract some information from every package file and store it in a database.
+2. Show a simple list with all packages stored
+3. Have a worker, which can be run periodically
 
-* Ruby version
 
-* System dependencies
+# Dependencies
 
-* Configuration
+```
+# These steps might be slightly different as I already had mysql/mariadb installed
+brew install mysql
+brew install redis
+brew tap homebrew/services
+brew services start mysql
 
-* Database creation
+gem install bundler
+bundle install
+```
 
-* Database initialization
+# Running it
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rails s
+# open localhost:3000, see the list
+```
