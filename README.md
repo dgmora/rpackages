@@ -22,13 +22,35 @@ bundle install
 
 # Running it
 
+Before:
+
+```
+rails db:create
+```
+
+Run the server:
 ```
 bundle exec rails s
 # open localhost:3000, see the list
 ```
 
+To run the cron:
+```
+bundle exec sidekiq
+```
 
-# Other options
+To populate the DB:
+```
+bundle exec rails c
+NewPackagesWorker.new.perform(amount: 50, days: 365)
+```
+
+To test:
+```
+bundle exec rspec
+```
+
+# Other options/things
 
 ### Using has_many :through with users
 
@@ -43,3 +65,5 @@ I don't like a lot draper gem and I think a helper is fine enough for such an ex
 ### Mocking downloads instead of using VCR
 
 For me it was quicker to use a simple mock than adding VCR
+
+### Would be nice™ to download and read the package info in parallel

@@ -9,8 +9,10 @@ gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+#gem 'redis', '~> 4.0'
 gem 'sass-rails', '~> 5.0'
+gem 'sidekiq'
+gem 'sidekiq-cron'
 gem 'treetop-dcf'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -29,8 +31,9 @@ group :test do
   # are a result and therefore must be tested. Just testing
   # http codes is not enough.
   # Not sure why it's not downloading..
-  gem 'rails-controller-testing'
+  #gem 'rails-controller-testing'
   gem 'webmock'
+  gem 'timecop'
 end
 
 group :development do

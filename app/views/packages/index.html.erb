@@ -1,5 +1,5 @@
 <h1>R packages</h1>
-<table>
+<table border=1>
   <thead>
     <tr>
       <th>Name</th>
@@ -15,7 +15,10 @@
     <tr>
       <th><%= p.name %></th>
       <th><%= p.title %></th>
-      <th><%= p.description %></th>
+      <%# I get this error if I show the description:%>
+      <%# incompatible character encodings: ASCII-8BIT and UTF-8 %>
+      <%# I dont have problems showing it anywhere else, and encoding is UTF-8. %>
+      <th><%= p.description.size %></th>
       <th><%= humanize_person_array(p.maintainers) %></th>
       <th><%= humanize_person_array(p.authors) %></th>
       <th><%= p.publication_date %></th>

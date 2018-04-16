@@ -20,11 +20,10 @@ class PackageHandler
       package_info.merge(desc_info)
     end
 
-    # In the real world probably should be save! + rescue & report
-    package_hashes.each do |package_hash|
+    package_hashes.map do |package_hash|
       package = Package.new(package_hash)
       Rails.logger(package.errors) if package.invalid?
-      package.save
+      package
     end
   end
 end
