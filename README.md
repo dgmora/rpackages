@@ -26,3 +26,12 @@ bundle install
 bundle exec rails s
 # open localhost:3000, see the list
 ```
+
+
+# Other options
+
+### Using has_many :through with users
+
+It's quite obvious that instead of serializing the authors and maintainers we
+could have a `Person` model, but this would involve checking if the user exists,
+and two extra tables which don't add a lot of benefit in this example.

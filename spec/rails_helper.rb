@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'factory_bot'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -7,7 +8,7 @@ require 'rspec/rails'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include FactoryBot::Syntax::Methods
 
   config.use_transactional_fixtures = true
 
