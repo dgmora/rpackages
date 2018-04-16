@@ -38,5 +38,8 @@ and two extra tables which don't add a lot of benefit in this example.
 
 ### Not using `package_helper`
 
-I don't like a lot draper gem and I think a helper is find enough for such an exercise.
+I don't like a lot draper gem and I think a helper is fine enough for such an exercise.
 
+### Mocking downloads instead of using VCR
+
+For me it was quicker to use a simple mock than adding VCR

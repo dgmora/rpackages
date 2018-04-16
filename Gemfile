@@ -11,6 +11,7 @@ gem 'rails', '~> 5.2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 gem 'sass-rails', '~> 5.0'
+gem 'treetop-dcf'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier', '>= 1.3.0'
@@ -28,7 +29,8 @@ group :test do
   # are a result and therefore must be tested. Just testing
   # http codes is not enough.
   # Not sure why it's not downloading..
-  # gem 'rails-controller-testing'
+  gem 'rails-controller-testing'
+  gem 'webmock'
 end
 
 group :development do
