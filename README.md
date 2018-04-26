@@ -1,10 +1,11 @@
 # R-packages
 
-This is a small rails project that will:
-
-1. Given a CRAN server, it will extract some information from every package file and store it in a database.
-2. Show a simple list with all packages stored
-3. Have a worker, which can be run periodically
+This is a small rails project that given a CRAN server (a server that hosts R-lang packages) will:
+1. Read a list with all the packages in that server, and extract some information from each package
+2. For each package, decompress it and read smore more information from the DESCRIPTION file.
+3. Store that info in a DB
+5. Show a simple list with all packages stored
+6. Run a worker periodically to store new packages
 
 
 # Dependencies
